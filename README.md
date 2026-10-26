@@ -6,6 +6,18 @@ Rukio Launcherのバイナリ配布専用リポジトリです。アプリ本体
 - バイナリ: https://github.com/kidatti/RukioLauncher/releases
 - 対応環境: Apple Silicon（M1以降）、macOS 14以降
 
+## 現在の配布版
+
+**v1.3.0 / Build 7**（2026-10-26公開）
+
+- [ダウンロード](https://github.com/kidatti/RukioLauncher/releases/download/v1.3.0-build7/Rukio-Launcher-1.3.0-build7-arm64.zip)
+- [チェックサム](https://github.com/kidatti/RukioLauncher/releases/download/v1.3.0-build7/Rukio-Launcher-1.3.0-build7-arm64.zip.sha256)
+- [更新履歴](CHANGELOG.md)
+
+Build 6で別のMacにおける起動失敗を修正した版です。以前のアプリを終了してから、ZIP内のアプリで入れ替えてください。設定の削除は不要です。
+
+配布ZIPはDeveloper ID署名・Appleの公証済みです。開発フォルダを参照できない環境でも、アプリ内の画像・翻訳を読み込めることを確認しています。
+
 ## サイトの公開
 
 GitHubのSettings → Pages → Build and deploymentでSourceを **GitHub Actions** に設定してください。`main` に `docs/` の変更をpushすると公開します。サイトはビルド不要のHTML/CSS/JavaScriptです。
@@ -13,8 +25,8 @@ GitHubのSettings → Pages → Build and deploymentでSourceを **GitHub Action
 公開済みの最新の正式リリースから、次の名前のZIPとチェックサムを自動表示します。リリースがない場合は「Web配布版は準備中です」と表示します。GitHub APIへ接続できない場合にもReleasesへのリンクを表示します。ドラフト・プレリリースは対象外です。
 
 ```text
-Rukio-Launcher-1.3.0-build6-arm64.zip
-Rukio-Launcher-1.3.0-build6-arm64.zip.sha256
+Rukio-Launcher-1.3.0-build7-arm64.zip
+Rukio-Launcher-1.3.0-build7-arm64.zip.sha256
 ```
 
 ## バイナリの公開
@@ -27,14 +39,14 @@ make build-web
 make notarize-web RUKIO_NOTARY_PROFILE=rukio-web
 ```
 
-成功して生成されたZIPとチェックサムだけをGitHub Releaseに添付します。例:
+成功して生成されたZIPとチェックサムだけをGitHub Releaseに添付します。次はBuild 7公開時の例です（公開済みのため再実行しないでください）。
 
 ```sh
-gh release create v1.3.0-build6 \
-  '/Users/kida/wk/alfred/dist-web/Rukio-Launcher-1.3.0-build6-arm64.zip' \
-  '/Users/kida/wk/alfred/dist-web/Rukio-Launcher-1.3.0-build6-arm64.zip.sha256' \
+gh release create v1.3.0-build7 \
+  '/Users/kida/wk/alfred/dist-web/Rukio-Launcher-1.3.0-build7-arm64.zip' \
+  '/Users/kida/wk/alfred/dist-web/Rukio-Launcher-1.3.0-build7-arm64.zip.sha256' \
   --repo kidatti/RukioLauncher \
-  --title 'Rukio Launcher 1.3.0 (Build 6)' \
+  --title 'Rukio Launcher 1.3.0 (Build 7)' \
   --notes 'Apple Silicon / macOS 14以降。ZIPを展開し、アプリケーションフォルダへ移動してください。'
 ```
 

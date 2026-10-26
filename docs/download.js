@@ -37,8 +37,8 @@
         status.textContent = 'Web配布版は準備中です。';
         return;
       }
-      const version = asset.name.match(/^Rukio-Launcher-([0-9.]+)-build/)[1];
-      status.textContent = `最新版 v${version}`;
+      const [, version, build] = asset.name.match(/^Rukio-Launcher-([0-9.]+)-build([0-9.]+)-arm64\.zip$/);
+      status.textContent = `最新版 v${version}（Build ${build}）`;
       download.href = safeAssetURL(asset);
       download.hidden = false;
       const megabytes = Number.isFinite(asset.size) && asset.size > 0 ? ` · ${(asset.size / 1024 / 1024).toFixed(1)} MB` : '';
