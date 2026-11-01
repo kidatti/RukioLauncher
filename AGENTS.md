@@ -5,3 +5,5 @@
 - Reuse existing App Store Connect contacts, URLs, pricing, availability, and release settings. Report upload, review submission, and public availability separately and verify each claimed state.
 - Report completed uploads as awaiting the user's final review. If credentials or Apple-side requirements block preparation, finish independent work and report the remaining step. Do not claim review submission or Store publication before they happen.
 - The application source is in `/Users/kida/wk/RukioLancher` (the spelling differs from this binary distribution repository). See its `Distribution/AppStore/README.md` and `API-AUTOMATION.md` for Store operations. Keep source code, credentials, and unnotarized binaries out of this distribution repository.
+
+- Each Web release must also update and publish https://www.apiless.com/rukio_launcher/changelog.html and the introduction page's latest-release note. Sources: `/Users/kida/wk/app-apiless-com/html/rukio_launcher/`; deployment details are in its `README.md`. Include any omitted prior releases, preserve history, and verify the live HTML after deployment.
