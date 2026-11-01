@@ -31,6 +31,8 @@ Rukio-Launcher-1.5.0-build10-arm64.zip.sha256
 
 ## バイナリの公開
 
+リリース時はWeb配布と合わせてApp Storeへの審査提出も行います。掲載画像・日英の更新内容を更新し、Store用ビルドのアップロード・Apple側の処理完了・Build選択・画像と掲載情報の反映・審査提出まで確認します。アップロード成功だけではStore提出完了としません。認証等で未完了の場合は残っている工程を明記します。
+
 開発リポジトリ `/Users/kida/wk/RukioLancher` でDeveloper ID署名・Appleの公証・検証を完了し、公開用ZIPを作成します。
 
 ```sh
