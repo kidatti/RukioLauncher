@@ -8,13 +8,13 @@ Rukio Launcherのバイナリ配布専用リポジトリです。アプリ本体
 
 ## 現在の配布版
 
-**v1.5.0 / Build 10**（2026-11-02公開）
+**v1.6.0 / Build 11**（2026-11-07公開）
 
-- [ダウンロード](https://github.com/kidatti/RukioLauncher/releases/download/v1.5.0/Rukio-Launcher-1.5.0-build10-arm64.zip)
-- [チェックサム](https://github.com/kidatti/RukioLauncher/releases/download/v1.5.0/Rukio-Launcher-1.5.0-build10-arm64.zip.sha256)
+- [ダウンロード](https://github.com/kidatti/RukioLauncher/releases/download/v1.6.0/Rukio-Launcher-1.6.0-build11-arm64.zip)
+- [チェックサム](https://github.com/kidatti/RukioLauncher/releases/download/v1.6.0/Rukio-Launcher-1.6.0-build11-arm64.zip.sha256)
 - [更新履歴](CHANGELOG.md)
 
-プレゼンテーション支援（虫眼鏡・キー入力表示・カーソル強調）と月表示カレンダーを追加しました。システム情報の折りたたみとアプリ検索も改善しました。以前のアプリを終了してから、ZIP内のアプリで入れ替えてください。設定の削除は不要です。
+グローバルIP・国・応答時間と疎通状態の表示、通信速度のK・M・G固定表示を追加し、メニューバーの余分な空白を削減しました。以前のアプリを終了してから、ZIP内のアプリで入れ替えてください。設定の削除は不要です。
 
 配布ZIPはDeveloper ID署名・Appleの公証済みです。開発フォルダを参照できない環境でも、アプリ内の画像・翻訳を読み込めることを確認しています。
 
@@ -25,8 +25,8 @@ GitHubのSettings → Pages → Build and deploymentでSourceを **GitHub Action
 公開済みの最新の正式リリースから、次の名前のZIPとチェックサムを自動表示します。リリースがない場合は「Web配布版は準備中です」と表示します。GitHub APIへ接続できない場合にもReleasesへのリンクを表示します。ドラフト・プレリリースは対象外です。
 
 ```text
-Rukio-Launcher-1.5.0-build10-arm64.zip
-Rukio-Launcher-1.5.0-build10-arm64.zip.sha256
+Rukio-Launcher-1.6.0-build11-arm64.zip
+Rukio-Launcher-1.6.0-build11-arm64.zip.sha256
 ```
 
 ## バイナリの公開
@@ -35,23 +35,23 @@ Rukio-Launcher-1.5.0-build10-arm64.zip.sha256
 
 リリース時はWeb配布と合わせてApp Store用ビルド・掲載画像・日英の更新内容をアップロードします。Apple側の処理完了・Build選択・画像と掲載情報の反映を確認したところで一度停止し、ユーザーの最終確認を待ちます。そのリリースについて明示的な承認を受けてから審査へ提出します。アップロード・審査提出・Store公開は区別して記録します。
 
-開発リポジトリ `/Users/kida/wk/RukioLancher` でDeveloper ID署名・Appleの公証・検証を完了し、公開用ZIPを作成します。
+開発リポジトリ `/Users/kida/wk/rukio-launcher` でDeveloper ID署名・Appleの公証・検証を完了し、公開用ZIPを作成します。
 
 ```sh
-cd /Users/kida/wk/RukioLancher
+cd /Users/kida/wk/rukio-launcher
 make build-web
 make notarize-web RUKIO_NOTARY_PROFILE=rukio-web
 ```
 
-成功して生成されたZIPとチェックサムだけをGitHub Releaseに添付します。v1.5.0の公開例です。公開済みのタグに対して再実行しないでください。
+成功して生成されたZIPとチェックサムだけをGitHub Releaseに添付します。v1.6.0の公開例です。公開済みのタグに対して再実行しないでください。
 
 ```sh
-gh release create v1.5.0 \
-  '/Users/kida/wk/RukioLancher/dist-web/Rukio-Launcher-1.5.0-build10-arm64.zip' \
-  '/Users/kida/wk/RukioLancher/dist-web/Rukio-Launcher-1.5.0-build10-arm64.zip.sha256' \
+gh release create v1.6.0 \
+  '/Users/kida/wk/rukio-launcher/dist-web/Rukio-Launcher-1.6.0-build11-arm64.zip' \
+  '/Users/kida/wk/rukio-launcher/dist-web/Rukio-Launcher-1.6.0-build11-arm64.zip.sha256' \
   --repo kidatti/RukioLauncher \
-  --title 'Rukio Launcher 1.5.0 (Build 10)' \
-  --notes-file '/Users/kida/wk/RukioLancher/Distribution/Web/RELEASE-1.5.0.md'
+  --title 'Rukio Launcher 1.6.0 (Build 11)' \
+  --notes-file '/Users/kida/wk/rukio-launcher/Distribution/Web/RELEASE-1.6.0.md'
 ```
 
 上記のバージョン・Build・ファイル名は実際の成果物に合わせます。`.app` 原本や公証前のZIP、開発用署名のバイナリは添付しないでください。配布ZIPをこのGitリポジトリへコミットする必要はありません。アプリを更新した際は同じバージョンのReleaseを書き換えるのではなく、新しいバージョンまたはBuildで公開します。
