@@ -1,5 +1,16 @@
 # 更新履歴
 
+## v1.7.0 / Build 12 — 2026-11-08
+
+[配布ファイル](https://github.com/kidatti/RukioLauncher/releases/tag/v1.7.0)
+
+- 設定の「修飾キー」で、macOSに保存されたキーボード別の割り当てを確認できます。入力監視を許可すると、Caps Lockなどのキーに別の修飾キーを割り当て、Rukio Launcherの起動中にほかのアプリでも使えます。
+- メニューバーのCPU・メモリ・ネットワーク・バッテリーの表示順を変更できます。各項目の幅は自動または24〜300ptの指定から選べます。
+- 通信速度の表示を「2.5 M」のようにK・M・Gで表記します。bit／bytesの選択は速度の計算に適用します。
+- 設定ウィンドウをポインターのあるディスプレイに開き、その画面に収まるサイズで表示します。
+
+Apple Silicon（M1以降）搭載Mac、macOS 14以降に対応します。Developer ID署名・Appleの公証済みです。
+
 ## v1.6.0 / Build 11 — 2026-11-07
 
 [配布ファイル](https://github.com/kidatti/RukioLauncher/releases/tag/v1.6.0)
